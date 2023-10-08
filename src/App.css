@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital@1&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Bodoni Moda", serif;
+}
+.main {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./images/bday.gif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-x: hidden;
+  position: relative;
+}
+audio {
+  position: fixed;
+  top: 0;
+  left: 40%;
+}
+#cat {
+  width: 85px;
+  object-fit: contain;
+  position: fixed;
+  top: -80px;
+  left: 52%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+.container {
+  perspective: 1000px;
+  position: absolute;
+  top: 50%;
+  left: 48%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.card {
+  width: 100%;
+  max-width: 280px;
+  height: 360px;
+  position: relative;
+  transition: 2s;
+  transform-style: preserve-3d;
+  padding-bottom: 20px;
+}
+.card:hover {
+  transform: rotateY(180deg);
+}
+
+.outside,
+.inside {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  text-align: center;
+  padding: 1.5rem;
+}
+.outside {
+  background-color: blanchedalmond;
+  box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.outside h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: salmon;
+  margin-bottom: 10px;
+}
+.inside {
+  background-color: rgb(255, 244, 79);
+  box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.5);
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.inside h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 20px;
+}

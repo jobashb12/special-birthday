@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <audio id="myAudio" src="happy.mp3"></audio>
+    <button onclick="playAudioAtTime(4)">Play at 4 seconds</button>
+  </body>
+</html>
+
+<script>
+  function playAudioAtTime(seconds) {
+    var audio = document.getElementById("myAudio");
+    if (audio) {
+      audio.currentTime = seconds;
+      audio.play();
+    }
+  }
+</script>
